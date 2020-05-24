@@ -63,8 +63,8 @@ where od.product_id = 2 and od2.product_id = 6
 
 --2.1 inner join
 select c.company_name  from order_details od 
-inner join orders o using("order_id")
-inner join customers c using("customer_id")
+inner join orders o using(order_id)
+inner join customers c using(customer_id)
 where od.product_id = 1
 intersect 
 select c.company_name  from order_details od 
